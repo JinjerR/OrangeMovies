@@ -10,6 +10,7 @@ object NetworkUtils {
     private const val baseUrl = "https://api.themoviedb.org/3/"
     const val moviePath = "movie"
     const val paramApiKey = "api_key"
+    const val baseImageUrl = "https://image.tmdb.org/t/p/w500/"
 
     fun buildRetrofit(): Retrofit {
         val client = OkHttpClient
@@ -29,6 +30,6 @@ object NetworkUtils {
             retrofit.create(cls)
 
     fun buildImageUrl(imagePath: String): String {
-        return "https://image.tmdb.org/t/p/w500$imagePath"
+        return "$baseImageUrl$imagePath"
     }
 }
