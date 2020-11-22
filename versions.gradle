@@ -10,12 +10,12 @@ versions.junit = "4.12"
 versions.ext_junit = "1.1.2"
 versions.espresso = "3.3.0"
 versions.android_gradle_plugin = "4.1.0"
-versions.room = "2.2.5"
 versions.material = "1.2.1"
 versions.kodein = "7.1.0"
 versions.fragment_ktx = "1.2.5"
 versions.retrofit = "2.8.1"
 versions.retrofit_coroutines_adapter = "0.9.2"
+versions.glide = "4.11.0"
 
 ext.versions = versions
 
@@ -47,16 +47,15 @@ kotlin.std_lib = "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin"
 kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
 deps.kotlin = kotlin
 
-def room = [:]
-room.runtime = "androidx.room:room-runtime:$versions.room"
-room.compiler = "androidx.room:room-compiler:$versions.room"
-room.coroutines = "androidx.room:room-ktx:$versions.room"
-deps.room = room
-
 def retrofit = [:]
 retrofit.lib = "com.squareup.retrofit2:retrofit:$versions.retrofit"
 retrofit.converter = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
 retrofit.coroutines = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$versions.retrofit_coroutines_adapter"
 deps.retrofit = retrofit
+
+def glide = [:]
+glide.lib = "com.github.bumptech.glide:glide:$versions.glide"
+glide.compiler = "com.github.bumptech.glide:compiler:$versions.glide"
+deps.glide = glide
 
 ext.deps = deps

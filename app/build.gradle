@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -9,7 +10,7 @@ android {
     buildToolsVersion build_versions.build_tools
 
     defaultConfig {
-        applicationId "com.jinjer.mvvmtemplate"
+        applicationId "com.jinjer.orangemovieapp"
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
         versionCode 1
@@ -31,6 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    dataBinding {
+        enabled true
+    }
 }
 
 dependencies {
@@ -44,12 +48,14 @@ dependencies {
     implementation deps.retrofit.lib
     implementation deps.retrofit.converter
     implementation deps.retrofit.coroutines
-
-    kapt deps.room.compiler
-    implementation deps.room.runtime
-    implementation deps.room.coroutines
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     implementation deps.kodein
+
+    implementation deps.material
+
+    implementation deps.glide.lib
+    kapt deps.glide.compiler
 
     testImplementation deps.junit
     androidTestImplementation deps.ext_junit

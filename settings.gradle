@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "MvvmTemplate"
+rootProject.name = "OrangeMovieApp"

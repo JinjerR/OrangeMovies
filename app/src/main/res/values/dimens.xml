@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="movie_img_size">100dp</dimen>
+    <dimen name="space">16dp</dimen>
+    <dimen name="space_half">8dp</dimen>
+    <dimen name="space_quarter">4dp</dimen>
+    <dimen name="progress_height">32dp</dimen>
+    <dimen name="progress_container_height">2.5dp</dimen>
+</resources>
